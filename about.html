@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <span class="filled-text" style="font-size: 50px;">
+        This is Sairakesh Gajvalli.<br>
+        Student From Northwest Missouri State University.<br>
+    </span>
+    <span class="outlined-text"  style="font-size: 50px;"aria-hidden="true">
+        This is Sairakesh Gajvalli.<br>
+        Student From Northwest Missouri State University.<br>
+    </span>
+    <div id="circle"></div>
+        <script>
+            document.addEventListener("mousemove", (e) => {
+              const circle = document.getElementById("circle");
+              const halfCircleSize = circle.offsetHeight / 2;
+              const mouse_x = e.clientX;
+              const mouse_y = e.clientY;
+              circle.style.left = `${mouse_x - halfCircleSize}px`;
+              circle.style.top = `${mouse_y - halfCircleSize}px`;
+            });
+          </script>
+          <style>
+            :root {
+                --text-color: #fff;
+                --bg-color: #3590f3;
+                --circle-color: var(--bg-color);
+                --circle-size: 200px;
+                }
+
+                * {
+                font-family: sans-serif;
+                letter-spacing: -5px;
+                cursor: grabbing;
+                margin: 0;
+                box-sizing: border-box;
+                position: absolute;
+                }
+
+                *::selection {
+                background: none;
+                }
+
+                body {
+                background: var(--bg-color);
+                overflow: hidden;
+                height: 100vh;
+                }
+
+                span {
+                width: 100vw;
+                padding: 5rem;
+                font-size: 5rem;
+                font-weight: bold;
+                line-height: 4rem;
+                text-align: center;
+                top: 50vh;
+                left: 50vw;
+                transform: translate(-50%, -50%);
+                }
+
+                @media screen and (max-width: 768px) {
+                span {
+                    padding: 5px;
+                    font-size: 3rem;
+                    line-height: 2.5rem;
+                }
+                }
+
+                span.filled-text {
+                color: var(--text-color);
+                z-index: 0;
+                }
+
+                span.outlined-text {
+                color: transparent;
+                -webkit-text-stroke: 0.5px var(--text-color);
+                z-index: 2;
+                }
+
+                #circle {
+                height: var(--circle-size);
+                width: var(--circle-size);
+                border-radius: 50%;
+                background: var(--circle-color);
+                border: 20px solid var(--text-color);
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                top: calc(50vh - 100px);
+                left: calc(50vw - 100px);
+                }
+            </style>
+    </body>
+</html>

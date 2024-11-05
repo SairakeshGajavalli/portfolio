@@ -6,7 +6,7 @@ body{
     font-size: caliber;
 }
 .hero{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: #aec2eb;
     font-family: sans-serif;
@@ -64,9 +64,9 @@ nav-main ul li a{
     margin-left: 40px;
 }
 .info{
-      margin-left: 8%;
-      margin-right: 15%;
-      margin-top: 15%;
+    margin-left: 8%;
+    margin-right: 15%;
+    margin-top: 15%;
 }
 .info h1{
     font-size: 50px;
